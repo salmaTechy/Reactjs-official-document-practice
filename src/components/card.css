@@ -1,0 +1,94 @@
+body{
+    background-image: url("../images/bg2.jpg");
+    color: white;
+    /* background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+    margin: 0;
+    padding: 0;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    place-content: center;
+    gap: 10px;
+    padding: 2%;
+}
+.card-holder{
+    padding: 3%;
+    /* border-left: 1px dotted orange; */
+    border: 1px dotted orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    margin: auto;
+    
+}
+.card-holder::before{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    /* margin-right: 3%; */
+    content: " ";
+    top:0;
+    left: 0px;
+    background-image: url("../images/flower.svg");
+     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 50%; */
+}
+/* .card-holder:nth-child(odd)::before {
+    background-image: url("../images/star.svg");
+}
+.card-holder:nth-child(even)::before {
+    background-image: url("../images/flower.svg");
+} */
+
+.card-holder img{
+    max-width: 50% !important;
+    border-radius: 5px;
+    
+}
+.card-holder::after{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    /* margin-right: 3%; */
+    content: " ";
+    bottom:0;
+    right: 0px;
+    background-image: url("../images/star.svg");
+     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 50%; */
+}
+button{
+    border: none;
+    padding: 10px;
+    /* border-radius: 15px; */
+
+}
+.btn{
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(230, 212, 109);
+    border-radius: 15px;
+    border: none;
+    margin-top: 1rem;
+
+}
+.btn-holder{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+@media (max-width: 500px) {
+.card{
+    grid-template-columns: auto;
+}
+    
+}
